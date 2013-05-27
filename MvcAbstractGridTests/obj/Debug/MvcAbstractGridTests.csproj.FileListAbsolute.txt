@@ -1,0 +1,14 @@
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGridTests.dll
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGridTests.pdb
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGrid.dll
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGrid.pdb
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\MvcAbstractGridTests.dll
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\MvcAbstractGridTests.pdb
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGridTests.dll
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGridTests.pdb
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGrid.dll
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\bin\Debug\MvcAbstractGrid.pdb
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\MvcAbstractGridTests.csprojResolveAssemblyReference.cache
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\MvcAbstractGridTests.dll
+C:\dev\MvcAbstractGrid\MvcAbstractGridTests\obj\Debug\MvcAbstractGridTests.pdb

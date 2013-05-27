@@ -1,0 +1,10 @@
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\Grid.exe.config
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\Grid.exe
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\Grid.pdb
+C:\dev\MvcAbstractGrid\Grid\obj\Debug\Grid.csprojResolveAssemblyReference.cache
+C:\dev\MvcAbstractGrid\Grid\obj\Debug\Grid.exe
+C:\dev\MvcAbstractGrid\Grid\obj\Debug\Grid.pdb
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\MvcAbstractGrid.dll
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\MvcAbstractGridTests.dll
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\MvcAbstractGridTests.pdb
+C:\dev\MvcAbstractGrid\Grid\bin\Debug\MvcAbstractGrid.pdb

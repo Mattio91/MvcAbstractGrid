@@ -1,0 +1,10 @@
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.dll
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.pdb
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\ResolveAssemblyReference.cache
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\MvcAbstractGrid.dll
+c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\MvcAbstractGrid.pdb
+C:\dev\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.dll
+C:\dev\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.pdb
+C:\dev\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\MvcAbstractGrid.csprojResolveAssemblyReference.cache
+C:\dev\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\MvcAbstractGrid.dll
+C:\dev\MvcAbstractGrid\MvcAbstractGrid\obj\Debug\MvcAbstractGrid.pdb

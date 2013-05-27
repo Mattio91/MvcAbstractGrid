@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="761bedc4-47b2-4095-9932-ac3196f6d8f9" name="kbbrodzx@KBBRODZX-MOBL1 2013-05-21 10:47:25" runUser="GER\kbbrodzx" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="e46f7164-57f4-460c-a2fb-52d02bfd37fe">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="kbbrodzx_KBBRODZX-MOBL1 2013-05-21 10_47_25">
+      <DeploymentItem filename="c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-05-21T10:47:25.4444194+02:00" queuing="2013-05-21T10:47:27.2776027+02:00" start="2013-05-21T10:47:27.3586108+02:00" finish="2013-05-21T10:47:28.2216971+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="2" executed="2" error="0" failed="2" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Result_Contains_Identifier_For_Second_Column" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="ae701151-0bac-6018-1d3a-6b93a5de8608">
+      <Execution id="2193b6fa-3052-46ab-81df-8e00af932d9c" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Identifier_For_Second_Column" />
+    </UnitTest>
+    <UnitTest name="Result_Contains_Identifier_For_First_Column" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76">
+      <Execution id="3f6995b1-770a-4819-9ee5-7194be035edc" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Identifier_For_First_Column" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76" executionId="3f6995b1-770a-4819-9ee5-7194be035edc" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae701151-0bac-6018-1d3a-6b93a5de8608" executionId="2193b6fa-3052-46ab-81df-8e00af932d9c" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="3f6995b1-770a-4819-9ee5-7194be035edc" testId="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76" testName="Result_Contains_Identifier_For_First_Column" computerName="KBBRODZX-MOBL1" duration="00:00:00.0702696" startTime="2013-05-21T10:47:27.4426192+02:00" endTime="2013-05-21T10:47:28.1766926+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3f6995b1-770a-4819-9ee5-7194be035edc">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MvcAbstractGridTests.GridFromViewModelTests.Result_Contains_Identifier_For_First_Column threw exception: 
+System.NotImplementedException: The method or operation is not implemented.</Message>
+          <StackTrace>    at MvcAbstractGridTests.MachineViewModel.FromCollection(IEnumerable`1 items) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\MachineViewModel.cs:line 14
+   at MvcAbstractGridTests.GridFromViewModelTests.Result_Contains_Identifier_For_First_Column() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 25
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="2193b6fa-3052-46ab-81df-8e00af932d9c" testId="ae701151-0bac-6018-1d3a-6b93a5de8608" testName="Result_Contains_Identifier_For_Second_Column" computerName="KBBRODZX-MOBL1" duration="00:00:00.0025099" startTime="2013-05-21T10:47:28.1826932+02:00" endTime="2013-05-21T10:47:28.1876937+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="2193b6fa-3052-46ab-81df-8e00af932d9c">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MvcAbstractGridTests.GridFromViewModelTests.Result_Contains_Identifier_For_Second_Column threw exception: 
+System.NotImplementedException: The method or operation is not implemented.</Message>
+          <StackTrace>    at MvcAbstractGridTests.MachineViewModel.FromCollection(IEnumerable`1 items) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\MachineViewModel.cs:line 14
+   at MvcAbstractGridTests.GridFromViewModelTests.Result_Contains_Identifier_For_Second_Column() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 33
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>

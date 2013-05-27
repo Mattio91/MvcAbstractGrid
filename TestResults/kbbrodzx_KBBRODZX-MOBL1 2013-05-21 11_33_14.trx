@@ -1,0 +1,119 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<TestRun id="92b15448-539f-4411-85f1-d23b6dcd8021" name="kbbrodzx@KBBRODZX-MOBL1 2013-05-21 11:33:14" runUser="GER\kbbrodzx" xmlns="http://microsoft.com/schemas/VisualStudio/TeamTest/2010">
+  <TestSettings name="Local" id="e46f7164-57f4-460c-a2fb-52d02bfd37fe">
+    <Description>These are default test settings for a local test run.</Description>
+    <Deployment enabled="false" runDeploymentRoot="kbbrodzx_KBBRODZX-MOBL1 2013-05-21 11_33_14">
+      <DeploymentItem filename="c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\bin\Debug\MvcAbstractGrid.dll" />
+    </Deployment>
+    <Execution>
+      <TestTypeSpecific />
+      <AgentRule name="Execution Agents">
+      </AgentRule>
+    </Execution>
+  </TestSettings>
+  <Times creation="2013-05-21T11:33:14.8753491+02:00" queuing="2013-05-21T11:33:15.0673683+02:00" start="2013-05-21T11:33:15.0843700+02:00" finish="2013-05-21T11:33:15.7904406+02:00" />
+  <ResultSummary outcome="Failed">
+    <Counters total="6" executed="6" error="0" failed="6" timeout="0" aborted="0" inconclusive="0" passedButRunAborted="0" notRunnable="0" notExecuted="0" disconnected="0" warning="0" passed="0" completed="0" inProgress="0" pending="0" />
+  </ResultSummary>
+  <TestDefinitions>
+    <UnitTest name="Result_Contains_Sorting_Links" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="2d0499fa-fc7c-dd25-1157-7db7e2ff7c89">
+      <Execution id="d650e48b-e56e-47b5-883e-edca946cd8a6" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Sorting_Links" />
+    </UnitTest>
+    <UnitTest name="Result_Correct_Column_Order" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="330c636f-6eda-56a3-d089-ea9a44400f36">
+      <Execution id="acad9ca0-f8ae-4609-93e9-0bfa540ac4b1" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Correct_Column_Order" />
+    </UnitTest>
+    <UnitTest name="Result_Is_Well_Formed_Html" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="594ae554-f593-72a4-c646-fd279ac58bd5">
+      <Execution id="d5d88976-97f5-4bf0-9ddf-4d22715b1fd8" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Is_Well_Formed_Html" />
+    </UnitTest>
+    <UnitTest name="Result_Contains_Identifier_For_First_Column" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76">
+      <Execution id="aeac4b2e-4994-4013-a415-e96a11f69391" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Identifier_For_First_Column" />
+    </UnitTest>
+    <UnitTest name="Result_Sorting_Works" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="08afeaa0-9eeb-9652-8de0-4898ee4b289f">
+      <Execution id="1a261ff3-248c-4aea-b315-c06be0a4a322" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.SortByTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Sorting_Works" />
+    </UnitTest>
+    <UnitTest name="Result_Contains_Identifier_For_Second_Column" storage="c:\users\kbbrodzx\documents\visual studio 2010\projects\mvcabstractgrid\mvcabstractgridtests\bin\debug\mvcabstractgridtests.dll" id="ae701151-0bac-6018-1d3a-6b93a5de8608">
+      <Execution id="3ca87e61-54f6-4e55-9876-08788384f15d" />
+      <TestMethod codeBase="c:/users/kbbrodzx/documents/visual studio 2010/Projects/MvcAbstractGrid/MvcAbstractGridTests/bin/Debug/MvcAbstractGridTests.DLL" adapterTypeName="Microsoft.VisualStudio.TestTools.TestTypes.Unit.UnitTestAdapter, Microsoft.VisualStudio.QualityTools.Tips.UnitTest.Adapter, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" className="MvcAbstractGridTests.GridFromViewModelTests, MvcAbstractGridTests, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" name="Result_Contains_Identifier_For_Second_Column" />
+    </UnitTest>
+  </TestDefinitions>
+  <TestLists>
+    <TestList name="Results Not in a List" id="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestList name="All Loaded Results" id="19431567-8539-422a-85d7-44ee4e166bda" />
+  </TestLists>
+  <TestEntries>
+    <TestEntry testId="08afeaa0-9eeb-9652-8de0-4898ee4b289f" executionId="1a261ff3-248c-4aea-b315-c06be0a4a322" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76" executionId="aeac4b2e-4994-4013-a415-e96a11f69391" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="2d0499fa-fc7c-dd25-1157-7db7e2ff7c89" executionId="d650e48b-e56e-47b5-883e-edca946cd8a6" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="330c636f-6eda-56a3-d089-ea9a44400f36" executionId="acad9ca0-f8ae-4609-93e9-0bfa540ac4b1" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="594ae554-f593-72a4-c646-fd279ac58bd5" executionId="d5d88976-97f5-4bf0-9ddf-4d22715b1fd8" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+    <TestEntry testId="ae701151-0bac-6018-1d3a-6b93a5de8608" executionId="3ca87e61-54f6-4e55-9876-08788384f15d" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" />
+  </TestEntries>
+  <Results>
+    <UnitTestResult executionId="1a261ff3-248c-4aea-b315-c06be0a4a322" testId="08afeaa0-9eeb-9652-8de0-4898ee4b289f" testName="Result_Sorting_Works" computerName="KBBRODZX-MOBL1" duration="00:00:00.0320582" startTime="2013-05-21T11:33:15.0953711+02:00" endTime="2013-05-21T11:33:15.6894305+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="1a261ff3-248c-4aea-b315-c06be0a4a322">
+      <Output>
+        <ErrorInfo>
+          <Message>Test method MvcAbstractGridTests.SortByTests.Result_Sorting_Works threw exception: 
+System.NotImplementedException: The method or operation is not implemented.</Message>
+          <StackTrace>    at MvcAbstractGrid.IEnumerableExtension.SortBy(IEnumerable collection, String propertyName, String sortOrder) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\IEnumerableExtension.cs:line 13
+   at MvcAbstractGridTests.SortByTests.Result_Sorting_Works() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\SortByTests.cs:line 18
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="aeac4b2e-4994-4013-a415-e96a11f69391" testId="0da3b4c6-8feb-bd2b-5269-3c35bb4d2e76" testName="Result_Contains_Identifier_For_First_Column" computerName="KBBRODZX-MOBL1" duration="00:00:00.0050749" startTime="2013-05-21T11:33:15.6954311+02:00" endTime="2013-05-21T11:33:15.7054321+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="aeac4b2e-4994-4013-a415-e96a11f69391">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method MvcAbstractGridTests.GridFromViewModelTests.SetUp threw exception. System.NotImplementedException: System.NotImplementedException: The method or operation is not implemented..</Message>
+          <StackTrace>    at MvcAbstractGrid.Html.GridFromViewModel[T](IEnumerable`1 model) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\HtmlExtension.cs:line 12
+   at MvcAbstractGridTests.GridFromViewModelTests.SetUp() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d650e48b-e56e-47b5-883e-edca946cd8a6" testId="2d0499fa-fc7c-dd25-1157-7db7e2ff7c89" testName="Result_Contains_Sorting_Links" computerName="KBBRODZX-MOBL1" duration="00:00:00.0020520" startTime="2013-05-21T11:33:15.7124328+02:00" endTime="2013-05-21T11:33:15.7254341+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d650e48b-e56e-47b5-883e-edca946cd8a6">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method MvcAbstractGridTests.GridFromViewModelTests.SetUp threw exception. System.NotImplementedException: System.NotImplementedException: The method or operation is not implemented..</Message>
+          <StackTrace>    at MvcAbstractGrid.Html.GridFromViewModel[T](IEnumerable`1 model) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\HtmlExtension.cs:line 12
+   at MvcAbstractGridTests.GridFromViewModelTests.SetUp() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="acad9ca0-f8ae-4609-93e9-0bfa540ac4b1" testId="330c636f-6eda-56a3-d089-ea9a44400f36" testName="Result_Correct_Column_Order" computerName="KBBRODZX-MOBL1" duration="00:00:00.0018303" startTime="2013-05-21T11:33:15.7324348+02:00" endTime="2013-05-21T11:33:15.7384354+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="acad9ca0-f8ae-4609-93e9-0bfa540ac4b1">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method MvcAbstractGridTests.GridFromViewModelTests.SetUp threw exception. System.NotImplementedException: System.NotImplementedException: The method or operation is not implemented..</Message>
+          <StackTrace>    at MvcAbstractGrid.Html.GridFromViewModel[T](IEnumerable`1 model) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\HtmlExtension.cs:line 12
+   at MvcAbstractGridTests.GridFromViewModelTests.SetUp() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="d5d88976-97f5-4bf0-9ddf-4d22715b1fd8" testId="594ae554-f593-72a4-c646-fd279ac58bd5" testName="Result_Is_Well_Formed_Html" computerName="KBBRODZX-MOBL1" duration="00:00:00.0018806" startTime="2013-05-21T11:33:15.7454361+02:00" endTime="2013-05-21T11:33:15.7524368+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="d5d88976-97f5-4bf0-9ddf-4d22715b1fd8">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method MvcAbstractGridTests.GridFromViewModelTests.SetUp threw exception. System.NotImplementedException: System.NotImplementedException: The method or operation is not implemented..</Message>
+          <StackTrace>    at MvcAbstractGrid.Html.GridFromViewModel[T](IEnumerable`1 model) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\HtmlExtension.cs:line 12
+   at MvcAbstractGridTests.GridFromViewModelTests.SetUp() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+    <UnitTestResult executionId="3ca87e61-54f6-4e55-9876-08788384f15d" testId="ae701151-0bac-6018-1d3a-6b93a5de8608" testName="Result_Contains_Identifier_For_Second_Column" computerName="KBBRODZX-MOBL1" duration="00:00:00.0017890" startTime="2013-05-21T11:33:15.7604376+02:00" endTime="2013-05-21T11:33:15.7654381+02:00" testType="13cdc9d9-ddb5-4fa4-a97d-d965ccfc6d4b" outcome="Failed" testListId="8c84fa94-04c1-424b-9868-57a2d4851a1d" relativeResultsDirectory="3ca87e61-54f6-4e55-9876-08788384f15d">
+      <Output>
+        <ErrorInfo>
+          <Message>Initialization method MvcAbstractGridTests.GridFromViewModelTests.SetUp threw exception. System.NotImplementedException: System.NotImplementedException: The method or operation is not implemented..</Message>
+          <StackTrace>    at MvcAbstractGrid.Html.GridFromViewModel[T](IEnumerable`1 model) in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGrid\HtmlExtension.cs:line 12
+   at MvcAbstractGridTests.GridFromViewModelTests.SetUp() in c:\users\kbbrodzx\documents\visual studio 2010\Projects\MvcAbstractGrid\MvcAbstractGridTests\GridFromViewModelTests.cs:line 23
+</StackTrace>
+        </ErrorInfo>
+      </Output>
+    </UnitTestResult>
+  </Results>
+</TestRun>
