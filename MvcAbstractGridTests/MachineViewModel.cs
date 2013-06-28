@@ -21,9 +21,9 @@ namespace MvcAbstractGridTests
 				ToList();
 		}
         
-		[DisplayName("Identyfikator"),DisplayOrder(1),Sortable(true)]
+		[DisplayName("Identyfikator"),DisplayOrder(2),Sortable(true)]
 		public String Id { get; set; }
-		[DisplayName("System Operacyjny"), DisplayOrder(2), Sortable(false)]
+		[DisplayName("System Operacyjny"), DisplayOrder(1), Sortable(false)]
 		public String OperatingSystemIcon { get; set; }
 		
 	} 

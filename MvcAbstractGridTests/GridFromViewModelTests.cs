@@ -15,7 +15,7 @@ namespace MvcAbstractGridTests
 		public void SetUp()
 		{
 			_testMachineCollection = MachineCollection.Get();
-			_result = new Html("test").GridFromViewModel(new MachineViewModel().FromCollection(_testMachineCollection));
+			_result = new HtmlGrid("test").GridFromViewModel(new MachineViewModel().FromCollection(_testMachineCollection));
 		}
 
 		[TestMethod]
@@ -42,9 +42,19 @@ namespace MvcAbstractGridTests
 		[TestMethod]
 		public void Result_Correct_Column_Order()
 		{
-			int firstIdentifierPosition = _result.IndexOf("Identyfikator");
+			int firstIdentifierPosition = _result.IndexOf("System Operacyjny");
 
-			int secondIdentifierPosition = _result.IndexOf("System Operacyjny");
+			int secondIdentifierPosition = _result.IndexOf("Identyfikator");
+
+			Assert.IsTrue(firstIdentifierPosition < secondIdentifierPosition);
+		}
+
+		[TestMethod]
+		public void Result_Correct_Data_Order()
+		{
+			int firstIdentifierPosition = _result.IndexOf("Windows");
+
+			int secondIdentifierPosition = _result.IndexOf("2");
 
 			Assert.IsTrue(firstIdentifierPosition < secondIdentifierPosition);
 		}

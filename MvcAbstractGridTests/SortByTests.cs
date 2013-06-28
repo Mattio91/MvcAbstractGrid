@@ -16,7 +16,7 @@ namespace MvcAbstractGridTests
 			var testMachineCollection = MachineCollection.Get();
 
             
-			var sortedCollection = testMachineCollection.SortBy("Id", "desc") as IEnumerable<Machine>;
+			var sortedCollection = testMachineCollection.SortBy<Machine>("Id", "DSC");
 
 			Assert.AreEqual(2, sortedCollection.First().Id);
 		}

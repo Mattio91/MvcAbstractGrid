@@ -9,178 +9,141 @@ using System.Web.UI;
 
 namespace MvcAbstractGrid
 {
-	public class Html
-    {
-        string sortAsc_imagePath = "iconASC.png";
-        string sortDsc_imagePath = "iconDSC.png";
-        string imageSortWidth = "10";
-        string imageSortHeight = "10";
-        string url;
-        public Html(string url)
-        {
-            this.url = url;
-        }
+	public class HtmlGrid
+	{
+		string sortAsc_imagePath = "/images/Green_Arrow_Up.png";
+		string sortDsc_imagePath = "/images/Red_Arrow_Down.png";
+		string imageSortWidth = "10";
+		string imageSortHeight = "10";
+		string _pageUrl;
+		private HtmlTextWriter _writer;
 
-		public String GridFromViewModel<T>(IEnumerable<GridViewModel<T>> model)
+		public HtmlGrid(string pageUrl)
 		{
-            SortedDictionary<DictionaryItem, List<String>> value_dict = new SortedDictionary<DictionaryItem, List<string>>(new DictionaryItemComparer());
-            
-            foreach (GridViewModel<T> item in model)
-            {
-                Type t = item.GetType();
-                System.Reflection.PropertyInfo[] infos = t.GetProperties();
+			this._pageUrl = pageUrl;
+		}
 
-                foreach (System.Reflection.PropertyInfo info in infos)
-                {
-                    DictionaryItem dItem = new DictionaryItem(getAttributes(info));
-
-                    if (!value_dict.ContainsKey(dItem))
-                        value_dict.Add(dItem, new List<string>(infos.Length));
-                    
-                    value_dict[dItem].Add((string)info.GetValue(item, null));                
-                }
-            }
-
-            Console.WriteLine(createHTMLTable(value_dict));
-            return createHTMLTable(value_dict);
+		public HtmlGrid(string pageUrl, string ascSortingIcon, string dscSortingIcon)
+			: this(pageUrl)
+		{
+			sortAsc_imagePath = ascSortingIcon;
+			sortDsc_imagePath = dscSortingIcon;
 		}
 
 
-        
-        private string createHTMLTable(SortedDictionary<DictionaryItem, List<String>> value_dict)
-        {
-	        StringWriter stringWriter = new StringWriter();
+		public String GridFromViewModel<T>(IEnumerable<GridViewModel<T>> model)
+		{
+			var columns = new SortedDictionary<ColumnDescriptor, List<string>>(new ColumnDescriptorComparer());
 
-            using (HtmlTextWriter writer = new HtmlTextWriter(stringWriter))
-            {
-                writer.RenderBeginTag(HtmlTextWriterTag.Table);
-                writer.RenderBeginTag(HtmlTextWriterTag.Tr);
+			foreach (GridViewModel<T> entity in model)
+			{
+				var entityProperties = entity.GetType().GetProperties();
 
-                foreach (DictionaryItem key in value_dict.Keys) //Insert keys to table
-                {
-                    writer.RenderBeginTag(HtmlTextWriterTag.Th);
-                    writer.Write(key.displayName);
-                    if (key.sortable) 
-                    {
-                        string url_Asc = string.Format("{0}&sortColumn={1}&sortOrder=ASC", url, key.displayName);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Href, url_Asc);
-                        writer.RenderBeginTag(HtmlTextWriterTag.A); 
+				foreach (var property in entityProperties)
+				{
+					try
+					{
+						var columnHeader = new ColumnDescriptor(getAttributes(property));
 
-                        writer.AddAttribute(HtmlTextWriterAttribute.Src, sortAsc_imagePath);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Width, imageSortWidth);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Height, imageSortHeight);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Alt, "Sort ASC");
-                        writer.RenderBeginTag(HtmlTextWriterTag.Img);  
-                        writer.RenderEndTag(); 
+						if (!columns.ContainsKey(columnHeader))
+							columns.Add(columnHeader, new List<string>());
 
-                        writer.RenderEndTag();
+						columns[columnHeader].Add(property.GetValue(entity, null).ToString());
+					}
+					catch (InvalidOperationException) { }
+				}
+			}
 
-                        string url_Dsc = string.Format("{0}&sortColumn={1}&sortOrder=DSC", url, key.displayName);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Href, url_Dsc);
-                        writer.RenderBeginTag(HtmlTextWriterTag.A);
-
-                        writer.AddAttribute(HtmlTextWriterAttribute.Src, sortDsc_imagePath);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Width, imageSortWidth);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Height, imageSortHeight);
-                        writer.AddAttribute(HtmlTextWriterAttribute.Alt, "Sort DSC");
-                        writer.RenderBeginTag(HtmlTextWriterTag.Img);
-                        writer.RenderEndTag();
-
-                        writer.RenderEndTag(); 
-                    }
-                    writer.RenderEndTag();
-                }
-
-                for (int i = 0; i < value_dict.Values.Count; i++) //Insert values to table
-                {
-                    writer.RenderBeginTag(HtmlTextWriterTag.Tr);
-                    foreach (List<string> list in value_dict.Values)
-                    {
-                        writer.RenderBeginTag(HtmlTextWriterTag.Td);
-                        writer.Write(list[i]);
-                        writer.RenderEndTag();
-                    }
-                    writer.RenderEndTag();
-                }
-                writer.RenderEndTag();
-                writer.RenderEndTag();
-
-                return stringWriter.ToString();
-            }
-        }
-        
-
-        private DictionaryItem getAttributes(System.Reflection.PropertyInfo info)
-        {
-
-            object[] attributes = info.GetCustomAttributes(true);
-            DictionaryItem DI = new DictionaryItem(info.Name);
-            DI.sortable = false;
-            DI.displayOrder = 0;
-            DI.displayName = DI.variableName;
-
-            foreach (Object att in attributes)
-            {
-                if (att is DisplayNameAttribute)
-                    DI.displayName = ((DisplayNameAttribute)att).DisplayName;
-                if (att is SortableAttribute)
-                    DI.sortable = ((SortableAttribute)att).value;
-                if (att is DisplayOrderAttribute)
-                    DI.displayOrder = ((DisplayOrderAttribute)att).value;
-            }
-            return DI;
-        }
+			return createHTMLTable(columns);
+		}
 
 
-        /* Old solution
-        
-        private Tuple<string, string> _tableTag = new Tuple<string, string>("<table>", "</table>");
-        private Tuple<string, string> _rowTag = new Tuple<string, string>("<tr>", "</tr>");
-        private Tuple<string, string> _columnTag = new Tuple<string, string>("<td>", "</td>");
-        private Tuple<string, string> _tableHeadTag = new Tuple<string, string>("<th>", "</th>");
-        private const string sortAscImg = "<img src=\"iconASC.png\" alt=\"sortASC\" height=\"10\" width=\"10\">";
-        private const string sortDscImg = "<img src=\"iconDSC.png\" alt=\"sortASC\" height=\"10\" width=\"10\">";
-        
-        private string createTable(SortedDictionary<DictionaryItem, List<String>> value_dict)
-        {
-            //Use some XML Writter etc.
-            StringBuilder fullTableString = new StringBuilder();
-            fullTableString.Append(_tableTag.Item1 + _rowTag.Item1);
 
-            var sorted = value_dict.Keys.OrderBy(s => s.displayOrder)
-                              .ThenBy(s => s.displayName);
+		private string createHTMLTable(SortedDictionary<ColumnDescriptor, List<String>> value_dict)
+		{
+			StringWriter stringWriter = new StringWriter();
 
-            foreach (DictionaryItem key in value_dict.Keys)
-            {
-                if (key.sortable)
-                    fullTableString.Append(tagging(_tableHeadTag, key.displayName + string.Format("<a href={0}&sortColumn={1}&sortOrder=ASC>{2}</a><a href={0}&sortColumn={1}&sortOrder=DSC>{3}</a>", url, key.displayName, sortAscImg, sortDscImg)));
-                else
-                    fullTableString.Append(tagging(_tableHeadTag, key.displayName));
-            }
+			_writer = new HtmlTextWriter(stringWriter);
 
-            fullTableString.Append(_rowTag.Item2);
+			this._writer.AddAttribute(HtmlTextWriterAttribute.Class, "test");
+			this._writer.RenderBeginTag(HtmlTextWriterTag.Table);
+			this._writer.RenderBeginTag(HtmlTextWriterTag.Tr);
 
-            for (int i = 0; i < value_dict.Values.Count; i++)
-            {
-                fullTableString.Append(_rowTag.Item1);
-                foreach (List<string> list in value_dict.Values)
-                {
-                    fullTableString.Append(tagging(_columnTag, list[i]));
-                }
-                fullTableString.Append(_rowTag.Item2);
-            }
+			foreach (ColumnDescriptor key in value_dict.Keys) //Insert keys to table
+			{
+				this._writer.RenderBeginTag(HtmlTextWriterTag.Th);
+				this._writer.Write(key.displayName);
+				if (key.sortable)
+				{
+					AddSortingLinks(key, this._writer);
+				}
+				this._writer.RenderEndTag();
+			}
 
-            fullTableString.Append(_tableTag.Item2);
+			for (int i = 0; i < value_dict.First().Value.Count; i++) //Insert values to table
+			{
+				this._writer.RenderBeginTag(HtmlTextWriterTag.Tr);
+				foreach (List<string> list in value_dict.Values)
+				{
+					this._writer.RenderBeginTag(HtmlTextWriterTag.Td);
+					this._writer.Write(list[i]);
+					this._writer.RenderEndTag();
+				}
+				this._writer.RenderEndTag();
+			}
+			this._writer.RenderEndTag();
+			this._writer.RenderEndTag();
 
-            return fullTableString.ToString();
-        }
-         
-        private string tagging(Tuple<string, string> tag, string tagged)
-        {
-            return tag.Item1 + tagged + tag.Item2;
-        }
+			return stringWriter.ToString();
 
-         
-         */
-    }
+		}
+
+		private void AddSortingLinks(ColumnDescriptor key, HtmlTextWriter writer)
+		{
+			SortingLink(key, "ASC");
+			SortingLink(key, "DSC");
+		}
+
+		private void SortingLink(ColumnDescriptor key, string order)
+		{
+			string url_Asc = string.Format("{0}&sortColumn={1}&sortOrder={2}", _pageUrl, key.variableName, order);
+			_writer.AddAttribute(HtmlTextWriterAttribute.Href, url_Asc);
+			_writer.RenderBeginTag(HtmlTextWriterTag.A);
+
+			_writer.AddAttribute(HtmlTextWriterAttribute.Src, sortAsc_imagePath);
+			_writer.AddAttribute(HtmlTextWriterAttribute.Width, imageSortWidth);
+			_writer.AddAttribute(HtmlTextWriterAttribute.Height, imageSortHeight);
+			_writer.AddAttribute(HtmlTextWriterAttribute.Alt, String.Format("Sort {0}", order));
+			_writer.RenderBeginTag(HtmlTextWriterTag.Img);
+			_writer.RenderEndTag();
+
+			_writer.RenderEndTag();
+		}
+
+
+		private ColumnDescriptor getAttributes(System.Reflection.PropertyInfo info)
+		{
+
+			object[] attributes = info.GetCustomAttributes(true);
+			ColumnDescriptor DI = new ColumnDescriptor(info.Name);
+			DI.sortable = false;
+			DI.displayOrder = 0;
+			DI.displayName = null;
+
+			foreach (Object att in attributes)
+			{
+				if (att is DisplayNameAttribute)
+					DI.displayName = ((DisplayNameAttribute)att).DisplayName;
+				if (att is SortableAttribute)
+					DI.sortable = ((SortableAttribute)att).value;
+				if (att is DisplayOrderAttribute)
+					DI.displayOrder = ((DisplayOrderAttribute)att).value;
+			}
+			if (DI.displayName == null)
+			{
+				throw new InvalidOperationException("Column does not have display parameters");
+			}
+			return DI;
+		}
+	}
 }

@@ -5,14 +5,14 @@ using System.Text;
 
 namespace MvcAbstractGrid
 {
-    class DictionaryItem
+    class ColumnDescriptor
     {
         public string variableName { set; get; }
         public string displayName { set; get;}
         public bool sortable { set; get; }
         public int displayOrder { set; get; }
 
-        public DictionaryItem(DictionaryItem di)
+        public ColumnDescriptor(ColumnDescriptor di)
         {
             this.variableName = di.variableName;
             this.displayName = di.displayName;
@@ -20,7 +20,7 @@ namespace MvcAbstractGrid
             this.displayOrder = di.displayOrder;
         }
 
-        public DictionaryItem(string variableName, string displayName, bool sortable, int displayOrder)
+        public ColumnDescriptor(string variableName, string displayName, bool sortable, int displayOrder)
         {
             this.variableName = variableName;
             this.displayName = displayName;
@@ -28,7 +28,7 @@ namespace MvcAbstractGrid
             this.displayOrder = displayOrder;
         }
 
-        public DictionaryItem(string variableName)
+        public ColumnDescriptor(string variableName)
         {
             this.variableName = variableName;
         }
