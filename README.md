@@ -1,3 +1,5 @@
+Project distributed under the BSD license.
+
 MvcAbstractGrid 0.1
 ===============
 
